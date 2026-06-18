@@ -7,4 +7,4 @@ This repository contains the lab exercises and automated tests for the CP115 Pyt
 ```bash
 git clone https://github.com/JSK-KML/CP115-Class-Repo.git
 cd CP115-Class-Repo
-```
+```kang lepman
