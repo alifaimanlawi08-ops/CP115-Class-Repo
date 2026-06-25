@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab-2"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-25 03:12:29 PM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNi0yNTswMjoxODoxNSBQTTsyNzU1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNi0yNTswMzoxMjoyOSBQTTs1OzI4Njc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ringgit" type="Integer" array="False" size=""/>
+            <input variable="ringgit"/>
+            <output expression="commission" newline="True"/>
+            <declare name="comissiom" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+</flowgorithm>
