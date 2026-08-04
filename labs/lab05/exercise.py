@@ -1,9 +1,5 @@
-# Lab 05 - practice file
-#
-# Use this file to try out the examples as you work through the lab.
-# Type them in, run the file, then clear it out and use it again for the next one.
-#
-# Run it from the terminal with:   python exercise.py
-# On Windows you may need:         py exercise.py
-#
-# Nothing in this file is marked, so experiment as much as you like.
+age = input("Please enter your age: ")
+name = input("Please enter your name: ")
+course_code = input("Please enter your course code: ")
+
+print(f"Hello {name}, you are {age} years old and you are enrolled in the course {course_code}.")
