@@ -6,7 +6,18 @@ import os
 
 @pytest.fixture
 def exercise_path():
-    return os.path.join(os.path.dirname(os.path.dirname(__file__)), 'exercise1.py')
+    test_dir = os.path.dirname(__file__)
+    candidates = [
+        os.path.join(os.path.dirname(test_dir), 'exercise1.py'),
+        os.path.join(test_dir, '..', 'exercise1.py'),
+        os.path.join(test_dir, '..', '..', 'exercise1.py'),
+    ]
+
+    for candidate in candidates:
+        if os.path.isfile(candidate):
+            return candidate
+
+    return candidates[0]
 
 
 def run_exercise(exercise_path, inputs):
@@ -36,7 +47,8 @@ def run_exercise(exercise_path, inputs):
 
 
 def read_lines(output, count, context):
-    lines = output.replace("\r\n", "\n").strip().split('\n') if output.strip() else []
+    normalized = output.replace("\r\n", "\n").replace("\r", "\n")
+    lines = [line.strip() for line in normalized.strip().split('\n') if line.strip()]
     if len(lines) != count:
         pytest.fail(
             f"{context}: expected {count} line(s) of output but got {len(lines)}. "
